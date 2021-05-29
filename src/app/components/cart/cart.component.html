@@ -1,0 +1,21 @@
+<div class="artboard">
+    <div class="card">
+        <div class="card__side card__side--back">
+            <div class="card__cover">
+                <h4 class="card__heading">
+                    <span class="heading-span" *ngIf="carrito.lineas.length == 0"> ¡Su carrito esta vació!</span>
+                </h4>
+            </div>
+            <div class="card__details">
+                <ul>
+                    <ng-container *ngFor="let linea of sortData; let i=index">
+                        <p class="titulo">{{i>0 &&
+                            carrito.lineas[i-1].evento.title==linea.evento.title?'':linea.evento.title}}</p>
+                        <li> {{ linea.session.date | date : 'dd/MM/yyyy' }} - {{ linea.cantidad }} <img class="basura"
+                                src="./assets/img/trash.png" (click)="quitarSession(linea.session)" /></li>
+                    </ng-container>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

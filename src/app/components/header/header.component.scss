@@ -1,0 +1,49 @@
+.icon {
+  color: white;
+  height: var(
+    --cds-global-space-7,
+    calc((16 / var(--cds-global-base, 20)) * 2rem)
+  );
+  width: var(
+    --cds-global-space-7,
+    calc((16 / var(--cds-global-base, 20)) * 2rem)
+  );
+}
+
+.title {
+  font-size: 1rem !important;
+}
+
+.gradient-border {
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 800% 800%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}

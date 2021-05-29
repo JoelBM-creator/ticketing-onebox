@@ -1,27 +1,28 @@
-# Onebox
+# Onebox - Proyecto de cartelera.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+## Especificaciónes de versión Angular:
+![Versión angular: ](./src/assets/github/versionAngular.PNG)
+## Se ha añadido un servidor JSON, para simular una DB:
+[//]: <> (Para iniciar servidor JSON: npm run json)
+![JSON-SERVER: ](./src/assets/github/jsonServer.PNG)
 
-## Development server
+## Alerta en caso de no encontrar DB:
+![Error de conexión: ](./src/assets/github/capturaErrordeConexion.PNG)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Imagen del primero SPA (Cartelera - large screen:
+![Captura large screen: ](./src/assets/github/carteleraOrdenadorScreen.PNG)
 
-## Code scaffolding
+## Imagen del primero SPA (Cartelera - medium/small screen ):
+![Captura responsive mobile-screen: ](./src/assets/github/carteleraMovileScreen.PNG)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Imagen del segundo SPA (Evento - large screen ):
+![Captura large screen front-card: ](./src/assets/github/eventoOrdenadorScreenFrontCard.PNG)
+![Captura large screen back-card: ](./src/assets/github/eventoOrdenadorScreenBackCard.PNG)
 
-## Build
+## Imagen del segundo SPA (Evento - medium/small screen ):
+![Captura responsive mobile-screen: ](./src/assets/github/eventoMovileScreen.PNG)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Imagen del ejemplo de carrito:
+![Captura ejemplo de carrito: ](./src/assets/github/ejemplodeCarrito.PNG)
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Espero que os guste, y múchas gracias!

@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="clr-row">
+    <div *ngFor="let evento of eventos | sort:'asc':'endDate'" class="clr-col-lg-6 clr-col-12">
+        <div class="card gradient-border">
+            <div class="card-header" (click)="getEvento(evento.id)">
+                {{ evento.title }} <br />
+                {{ evento.subtitle }}
+            </div>
+            <div class="card-block">
+                <div class="card-media-block">
+                    <img src="{{evento.image}}" class="card-media-image" (click)="getEvento(evento.id)" />
+                </div>
+                <div class="card-media-description">
+                    <span class="card-media-text">
+                        {{ evento.startDate | date : 'dd/MM/yyyy' }} - {{ evento.endDate | date : 'dd/MM/yyyy'}} <br />
+                        {{ evento.place }}
+                    </span>
+                </div>
+                <div class="card-text">
+                    <p [innerHTML]="evento.description" class="nodisplay"></p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary btn-block" (click)="getEvento(evento.id)">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>

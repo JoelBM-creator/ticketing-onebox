@@ -1,0 +1,49 @@
+<app-header></app-header>
+<button class="btn btn-outline button-options" routerLink="/cartera">
+    <cds-icon shape="angle" direction="left"></cds-icon> Volver
+</button>
+<div class="clr-row">
+    <div class="clr-col-lg-6 clr-col-12">
+        <div class="artboard">
+            <div class="card">
+                <div class="card__side card__side--back">
+                    <div class="card__cover">
+                        <h4 class="card__heading">
+                            <span class="card__heading-span">Gira: {{ evento.event.subtitle }}</span>
+                        </h4>
+                    </div>
+                    <div class="card__details">
+                        <ul>
+                            <li *ngFor="let session of sesiones | sort:'asc':'date'">
+                                Fecha: {{ session.date | date : 'dd/MM/yyyy' }}
+                                Disponibles: {{ session.availability }}
+                                <br />
+                                <button class="btn btn-icon btn-sm btn-link" (click)="quitarSession(session)"
+                                    [disabled]=!carrito.obtenerCantidad(session)>
+                                    <cds-icon shape="minus-circle"></cds-icon>
+                                </button>
+                                <ng-container> {{ carrito.obtenerCantidad(session) }} </ng-container>
+                                <button class="btn btn-icon btn-sm btn-link" (click)="anadirSession(session)">
+                                    <cds-icon shape="plus-circle"></cds-icon>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card__side card__side--front">
+                    <div class="card__theme">
+                        <div class="card__theme-box">
+                            <p class="card__subject">{{ evento.event.title }}</p>
+                            <p class="card__title">{{ evento.event.subtitle }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="clr-col-lg-6 clr-col-12">
+        <app-cart></app-cart>
+    </div>
+</div>
